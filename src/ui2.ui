@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!-- Created with Cambalache 0.10.3 -->
+<interface>
+  <!-- interface-name ui2.ui -->
+  <requires lib="gtk" version="4.6"/>
+  <object class="GtkApplicationWindow" id="window">
+    <property name="halign">center</property>
+    <property name="height-request">400</property>
+    <property name="show-menubar">True</property>
+    <property name="width-request">500</property>
+    <child>
+      <object class="GtkBox" id="main_box">
+        <property name="orientation">vertical</property>
+        <child>
+          <object class="GtkActionBar"/>
+        </child>
+        <child>
+          <object class="GtkLabel" id="label1">
+            <property name="label">hello test the button</property>
+            <property name="vexpand">True</property>
+          </object>
+        </child>
+        <child>
+          <object class="GtkButton" id="button">
+            <property name="label">Exit</property>
+          </object>
+        </child>
+      </object>
+    </child>
+  </object>
+  <object class="GtkMessageDialog" id="messagedialog">
+    <property name="buttons">ok-cancel</property>
+    <property name="modal">True</property>
+    <property name="resizable">False</property>
+    <property name="text">You click the button!</property>
+    <property name="transient-for">window</property>
+  </object>
+</interface>
